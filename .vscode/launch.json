@@ -9,6 +9,20 @@
             "name": "CodeLens (Launch) - Calango",
             "request": "launch",
             "mainClass": "Calango",
+            "projectName": "Edvaldo-Oliveira-POO-2020.2_469bd24f"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Edvaldo-Oliveira-POO-2020.2_469bd24f"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Calango",
+            "request": "launch",
+            "mainClass": "Calango",
             "projectName": "s02e01_java_b9dbd884"
         },
         {

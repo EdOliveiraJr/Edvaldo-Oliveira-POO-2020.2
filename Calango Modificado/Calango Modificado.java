@@ -1,6 +1,3 @@
-
-
-
 public class Calango {
     int bucho; //atributos
     int maxBucho;
