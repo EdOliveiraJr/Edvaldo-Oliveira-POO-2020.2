@@ -1,7 +1,10 @@
+<<<<<<< HEAD:CalangoModificado/Calango Modificado.java
 
  
 
 
+=======
+>>>>>>> 7a6174a1e93b7c4f1ab6064cc13abcfc2a9233bb:Calango Modificado/Calango Modificado.java
 public class Calango {
     int bucho; //atributos
     int maxBucho;
