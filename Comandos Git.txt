@@ -37,3 +37,9 @@ collaborate (see also: git help workflows)
    fetch             Download objects and refs from another repository
    pull              Fetch from and integrate with another repository or a local branch
    push              Update remote refs along with associated objects
+
+comandos básicos aprendidos
+   dir               mostra o que tem no diretório onde você está
+   vim               visualiza e abre edição do documento especificado
+   code .            abre o dieretório no VS Code ou editor definido como padrão
+   
