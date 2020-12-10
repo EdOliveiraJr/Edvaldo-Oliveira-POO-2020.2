@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Cururu",
+            "request": "launch",
+            "mainClass": "Cururu",
+            "projectName": "Edvaldo-Oliveira-POO-2020.2_a27f7a11"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Calango",
             "request": "launch",
             "mainClass": "Calango",
