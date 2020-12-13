@@ -13,7 +13,11 @@ Comecei a assistir as aulas de Java Básico do "Curso Em Vídeo" e praticar o us
 Já estou entendendo melhor o uso do VS Code e estou aprendendo a usar o NetBeans.
 
 13.12.2020
+
 Assistindo novamente as aulas;
+
 Aprendendo como scannear;
+
 Aprendendo a fazer código interativo;
+
 Feito códgigo Cururu2, incluindo a interatividade;
