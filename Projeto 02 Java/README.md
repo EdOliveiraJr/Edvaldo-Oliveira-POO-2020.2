@@ -20,4 +20,6 @@ Aprendendo como scannear;
 
 Aprendendo a fazer código interativo;
 
-Feito códgigo Cururu2, incluindo a interatividade;
+Feito código Cururu2, incluindo a interatividade;
+
+Feito código Cururu3, incluindo passagem de parametros na interatividade;
