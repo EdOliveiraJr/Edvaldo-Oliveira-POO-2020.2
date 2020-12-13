@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - Cururu2",
+            "request": "launch",
+            "mainClass": "Cururu2",
+            "projectName": "Edvaldo-Oliveira-POO-2020.2_a27f7a11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Interativo",
+            "request": "launch",
+            "mainClass": "Interativo",
+            "projectName": "Edvaldo-Oliveira-POO-2020.2_a27f7a11"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Solver",
+            "request": "launch",
+            "mainClass": "Solver",
+            "projectName": "Edvaldo-Oliveira-POO-2020.2_a27f7a11"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Cururu",
             "request": "launch",
             "mainClass": "Cururu",

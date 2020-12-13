@@ -1,11 +1,12 @@
+import java.util.Scanner;
 
-public class Cururu{
+public class Cururu2{
     int bucho;
     int maxBucho;
     int agua;
     int maxAgua;
 
-    Cururu(int bucho, int maxBucho, int agua, int maxAgua){
+    Cururu2(int bucho, int maxBucho, int agua, int maxAgua){
         this.bucho = bucho;
         this.maxBucho = maxBucho;
         this.agua = agua;
@@ -17,7 +18,7 @@ public class Cururu{
             bucho +=1;
             System.out.println("Slp!! Glump!! Aaah!! Delicius!!");
         }else{
-            System.out.println("Tô espocando!!! 0.o");
+            System.out.println("Nan manchuuu!! Tô espocando!!! 0.o");
           }
     }
 
@@ -54,21 +55,48 @@ public class Cururu{
     }
     
     public static void main(String[] args) {
-        //referência = criando objeto
-        Cururu sapao = new Cururu(0, 10, 0, 10);
-        System.out.println(sapao);
-        sapao.pegarSol();
-        sapao.pular();
-        sapao.hidratar();sapao.hidratar();sapao.hidratar();sapao.hidratar();
-        sapao.comer();sapao.comer();sapao.comer();sapao.comer();sapao.comer();
-        System.out.println(sapao);
-             
+        Cururu2 joao = new Cururu2(0, 10, 0, 10);
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        while(true){
+            String line = scanner.nextLine();
+            if(line.equals("end")){
+                System.out.println("¡Adios amigo!");
+                break;
+            }else if(line.equals("show")){
+                System.out.println(joao);
+            }else if(line.equals("comer")){
+                joao.comer();
+            }else if(line.equals("pular")){
+                joao.pular();
+            }else if(line.equals("beber")){
+                joao.hidratar();
+            }else if(line.equals("solzinho") ){
+                joao.pegarSol();
+            }else{
+                System.out.println("FAIL!!! EOQ MAN?!");
+            }
+        }
+        scanner.close();             
     }
-    
-
 }
 
-/*sapao.comer();
+/*COMENTADOS
+sapao.comer();
     sapao.pular();
     sapao.pegarSol();
-    sapao.hidratar();*/
+    sapao.hidratar();
+
+    //referência = criando objeto
+    Cururu sapao = new Cururu(0, 10, 0, 10);
+    System.out.println(sapao);
+    sapao.pegarSol();
+    sapao.pular();
+    sapao.hidratar();sapao.hidratar();sapao.hidratar();sapao.hidratar();
+    sapao.comer();sapao.comer();sapao.comer();sapao.comer();sapao.comer();
+    System.out.println(sapao);
+    
+    
+*/
+
