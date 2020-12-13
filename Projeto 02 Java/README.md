@@ -10,4 +10,10 @@ Demorei para começar, por que não estava entendendo corretamente o uso do Git 
 
 Comecei a assistir as aulas de Java Básico do "Curso Em Vídeo" e praticar o uso do Git, fazendo pesquisas na internet. Com isso o passei a dominar melhor. 
 
-Já estou entendendo melhor o uso do VS Code e estou aprendendo a usar o NetBeans. 
+Já estou entendendo melhor o uso do VS Code e estou aprendendo a usar o NetBeans.
+
+13.12.2020
+Assistindo novamente as aulas;
+Aprendendo como scannear;
+Aprendendo a fazer código interativo;
+Feito códgigo Cururu2, incluindo a interatividade;
