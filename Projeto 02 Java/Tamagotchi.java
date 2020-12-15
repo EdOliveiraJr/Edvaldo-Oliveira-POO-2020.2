@@ -9,12 +9,15 @@ public class Tamagotchi {
     private int limpeza;
     private int diamantes;
     private int idade;
-    private boolean vivo;
+    private boolean vivo = true;
 
-    Tamagotchi Pet(int energiaMax, int saciedadeMax, int limpezaMax){
+    Tamagotchi(int energiaMax, int saciedadeMax, int limpezaMax){
         this.energiaMax = energiaMax;
         this.saciedadeMax =  saciedadeMax;
         this.limpezaMax = limpezaMax;
+    }
+
+    public void ajuda(){
     }
 
     public String toString() {
@@ -79,13 +82,16 @@ public class Tamagotchi {
             setIdade(getIdade() + 2));
     }
 
-    public void domirSemSono(){
+    public void dormirSemSono(){
         
     }
 
     public void morrer(){
-        
+        if(testeVivo()) return;
+        else if(energia == 0 || saciedade == 0 || limpeza == 0) vivo = false;
+
     }
+    
     public static void public static void main(String[] args) {
         Tamagotchi pet = new Tamagotchi(20, 10, 15);
         
