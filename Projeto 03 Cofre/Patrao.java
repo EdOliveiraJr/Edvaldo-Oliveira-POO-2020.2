@@ -1,10 +1,11 @@
-enum Dinheiro{
-    N5(5, 2),
+import java.util.Scanner;
+
+import jdk.internal.jshell.tool.resources.version;
+
+enum Dinheiro {
     N10(10, 2), 
-    N20(20, 2), 
     N50(50, 2), 
-    N100(100, 2),
-    N200(200, 2);
+    N100(100, 2);
 
     int valor;
     int volume;
@@ -166,6 +167,60 @@ public class Patrao {
         cofre.pegarItem();
         System.out.println(cofre);
     
+        Scanner scanner = new Scanner(System.in);
+
+        while(true){
+            String line = scanner.nextLine();
+            String[] ui = line.split(" ");
+
+            if(line.equals("end")){
+                System.out.println("O cofre sumiu. FIM.");
+                break;
+            }else if(ui[0].equals("adicionardinheiro")){
+                if(!cofre.estaFechado){
+                    if(ui[1].equals("10")){
+                        cofre.adicionarDinheiro(Dinheiro.N10);
+                        System.out.println("Você guardou 10\n");
+                        System.out.println(cofre);                        
+                    }else if(ui[1].equals("50")){
+                        cofre.adicionarDinheiro(Dinheiro.N50);
+                        System.out.println("Você guardou 50\n");
+                        System.out.println(cofre);
+                    }else if(ui[1].equals("100")){
+                        cofre.adicionarDinheiro(Dinheiro.N100);
+                        System.out.println("Você guardou 100\n");
+                        System.out.println(cofre);
+                    }
+                }else{
+                    System.out.println("O cofre está fechado");
+                }
+            }else if(ui[0].equals("adicionaritem")){
+                if(!cofre.estaFechado){
+                    Item item = new Item(ui[1], Integer.parseInt(ui[2]));
+                    cofre.adicionarItem(item);
+                    System.out.println("Você guardou um Item no cofre\n");
+                    System.out.println(cofre);
+                }else{
+                    System.out.println("O cofre está fechado");
+                }
+                    
+            }else if(ui[0].equals("abrir")){
+                cofre.abrirCofre();
+            }else if(ui[0].equals("fechar")){
+                cofre.fecharCofre();
+            }else if(ui[0].equals("pegardinheiro")){
+                cofre.pegarDinheiro();
+            }else if(ui[0].equals("pergaritem")){
+                cofre.pegarItem();
+            }
+            else if(ui[0].equals("ver")){
+                System.out.println(cofre);
+            }else{
+                System.out.println("Comando Invalido");
+            }
+
+        }
+        
     }
     
 }
