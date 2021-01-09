@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Patrao",
+            "request": "launch",
+            "mainClass": "Patrao",
+            "projectName": "Edvaldo-Oliveira-POO-2020.2_a27f7a11"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - Tamagotchi",
             "request": "launch",
             "mainClass": "Tamagotchi",
