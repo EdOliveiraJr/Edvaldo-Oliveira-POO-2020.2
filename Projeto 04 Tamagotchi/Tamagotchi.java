@@ -27,7 +27,7 @@ class Pet {
         energia = value;
         if(energia <= 0){
             energia = 0;
-            System.out.println("Seu Tamagotchi bateu as botas por falta de energia");
+            System.out.println("Seu Tamagotchi bateu as botas por falta de energia. Reinicie e Inicie um novo!");
             this.vivo = false;
         }
         if(energia > energiaMax)
@@ -38,7 +38,7 @@ class Pet {
         saciedade = value;
         if(saciedade <= 0){
             saciedade = 0;
-            System.out.println("Seu Tamagotchi bateu as botas por fome");
+            System.out.println("Seu Tamagotchi bateu as botas por fome. Reinicie e Inicie um novo!");
             this.vivo = false;
         }
         if(saciedade > saciedadeMax)
@@ -49,7 +49,7 @@ class Pet {
         limpeza = value;
         if(limpeza <= 0){
             limpeza = 0;
-            System.out.println("Seu Tamagotchi bateu as botas por falta de limpeza");
+            System.out.println("Seu Tamagotchi bateu as botas por falta de limpeza. Reinicie e Inicie um novo!");
             this.vivo = false;
         }
         if(limpeza > limpezaMax)
@@ -71,7 +71,7 @@ class Pet {
     boolean testeMorto(){
         if(this.vivo)
             return false;
-        System.out.println("Morto nao faz nada");
+        System.out.println("Você deixou o Tamagotchi morrer, Reinicie e Inicie um novo!");
             return true;
     
     }
@@ -80,20 +80,12 @@ class Pet {
         return this.vivo;
     }
 
-    public void iniciar(){
-      
-    }
-
-    public void mostrar(){
-        
-    }
-    
     public void brincar(){
         if(testeMorto())
             return;
-        this.setEnergia(this.getEnergia() - 2);
-        this.setSaciedade(this.getSaciedade() - 1);
-        this.setLimpeza(this.getLimpeza() - 3);
+        this.setEnergia(getEnergia() - 2);
+        this.setSaciedade(getSaciedade() - 1);
+        this.setLimpeza(getLimpeza() - 3);
         this.diamante ++;
         this.idade ++;
     }
@@ -101,25 +93,25 @@ class Pet {
     public void comer(){
         if(testeMorto())
             return;
-        this.setEnergia(this.getEnergia() - 1);
-        this.setSaciedade(this.getSaciedade() + 4);
-        this.setLimpeza(this.getLimpeza() - 2);
+        this.setEnergia(getEnergia() - 1);
+        this.setSaciedade(getSaciedade() + 4);
+        this.setLimpeza(getLimpeza() - 2);
         this.idade ++;
     }
 
     public void dormir(){
         if(testeMorto())
             return;
-        this.setEnergia(this.energiaMax);
+        this.setEnergia(energiaMax);
         this.idade ++;
     }
 
-    public void banho(){
+    public void banhar(){
         if(testeMorto())
             return;
-        this.setEnergia(this.getEnergia() - 3);
-        this.setSaciedade(this.getSaciedade() - 1);
-        this.setLimpeza(this.limpezaMax);
+        this.setEnergia(getEnergia() - 3);
+        this.setSaciedade(getSaciedade() - 1);
+        this.setLimpeza(limpezaMax);
         this.idade += 2;
     }
 
@@ -131,7 +123,7 @@ class Pet {
 
 public class Tamagotchi {
     public static void main(String[] args) {
-        Pet tamagotchi = new Pet(50, 50, 50);
+        /*Pet tamagotchi = new Pet(50, 50, 50);
         System.out.println(tamagotchi);
         tamagotchi.brincar();
         System.out.println(tamagotchi);
@@ -139,7 +131,7 @@ public class Tamagotchi {
         System.out.println(tamagotchi);
         tamagotchi.dormir();
         System.out.println(tamagotchi);
-        tamagotchi.banho();
+        tamagotchi.banhar();
         System.out.println(tamagotchi);
 
         while(tamagotchi.estaVivo()){
@@ -154,29 +146,55 @@ public class Tamagotchi {
         System.out.println(tamagotchi);
         tamagotchi.dormir();
         System.out.println(tamagotchi);
-        tamagotchi.banho();
-        System.out.println(tamagotchi);
+        tamagotchi.banhar();
+        System.out.println(tamagotchi);*/
 
 
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         
         while(true){
 
             String line = scanner.nextLine();
             String[] ui = line.split(" ");
 
-            if(line.equals("sair")){
+            if(ui[0].equals("iniciar")){
+                Pet tamagotchi1 = new Pet(Integer.parseInt(ui[1]), Integer.parseInt(ui[2]),Integer.parseInt(ui[3]));
+                System.out.println("O Tamagotchi nasceu!!");
+                System.out.println(tamagotchi1);
+                
+                while(true){
+
+                    String line2 = scanner.nextLine();
+                    String[] ui2 = line.split(" ");
+                    
+                    if(line2.equals("reiniciar")){
+                        System.out.println("Trágico! Inicie um novo Tamagotchi!");
+                        break;
+                    }else if(line2.equals("mostrar")){
+                        System.out.println(tamagotchi1);
+                    }else if(line2.equals("brincar")){
+                        tamagotchi1.brincar();
+                        System.out.println(tamagotchi1);
+                    }else if(line2.equals("comer")){
+                        tamagotchi1.comer();
+                        System.out.println(tamagotchi1);
+                    }else if(line2.equals("dormir")){
+                        tamagotchi1.dormir();
+                        System.out.println(tamagotchi1);
+                    }else if(line2.equals("banhar")){
+                        tamagotchi1.banhar();
+                        System.out.println(tamagotchi1);
+                    }else{
+                        System.out.println("Comando Invalido");
+                    }
+                }
+            }else if(line.equals("sair")){
                 System.out.println("Tchau, Xero!");
                 break;
-            }else if(line.equals("iniciar")){
-                tamagotchi.iniciar();
-                System.out.println("O Tamagotchi nasceu!!");
-            }else if(line.equals("mostrar")){
-                tamagotchi.mostrar();
             }else{
                 System.out.println("Comando Invalido");
             }
-        } */       
+        }
     }
 }       
  
