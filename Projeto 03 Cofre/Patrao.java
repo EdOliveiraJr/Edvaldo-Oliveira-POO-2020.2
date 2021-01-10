@@ -136,7 +136,7 @@ class Cofre{
 public class Patrao {
     public static void main(String[] args) {
         Cofre cofre = new Cofre(50);
-        System.out.println(cofre);
+        /*System.out.println(cofre);
         cofre.adicionarDinheiro(Dinheiro.N100);
         cofre.adicionarDinheiro(Dinheiro.N50);
         System.out.println(cofre);
@@ -165,7 +165,7 @@ public class Patrao {
         System.out.println(cofre);
         cofre.pegarDinheiro();
         cofre.pegarItem();
-        System.out.println(cofre);
+        System.out.println(cofre);*/
     
         Scanner scanner = new Scanner(System.in);
 
